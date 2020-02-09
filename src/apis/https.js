@@ -21,7 +21,6 @@ const errorHandle = (status, msg) => {
         // 不用tip, 會由Login去導向首頁
       } else {
         // 清除token
-        localStorage.removeItem('token');
         store.dispatch('auth/setAuth', {
           "token": '',
           "isLogin": false

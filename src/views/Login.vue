@@ -64,8 +64,7 @@ export default {
       }).then((response) => {
         let res = response.data;
         let token = res.result.token;
-
-        localStorage.setItem('token', token);
+        
         this.$store.dispatch('auth/setAuth', {
           "token": token,
           "isLogin": true
