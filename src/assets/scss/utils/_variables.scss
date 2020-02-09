@@ -1,0 +1,34 @@
+// text color
+$main-text-color: #303133;
+$regular-text-color: #606266;
+$secondary-text-color: #909399;
+$placeholder-text-color: #C0C4CC;
+
+$primary-text-color: #409EFF;
+$primary-dark-text-color: #277ee2;
+$success-text-color: #67C23A;
+$warning-text-color: #E6A23C;
+$danger-text-color: #F56C6C;
+$info-text-color: #909399;
+
+$white-text-color: white;
+$black-text-color: black;
+
+// border color
+$base-border-color: #DCDFE6;
+$light-border-color: #E4E7ED;
+$lighter-border-color: #EBEEF5;
+
+// border
+$light-border: 1px solid $light-border-color;
+$transparent-border: rgba(0,0,0,0);
+
+// text shadow
+$text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+
+// trainsition
+$quick-transition: all .3s ease;
+$slow-transition: all .8s ease;
+
+// ellipsis
+$ellipsis-scales: 1, 2, 3;

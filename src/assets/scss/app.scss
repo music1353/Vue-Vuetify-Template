@@ -1,6 +1,14 @@
+// Utils
+@import 'utils/mixin';
+@import 'utils/variables';
+
 // Base
 @import 'base/basic';
 @import 'base/text';
+
+// Components
+@import 'components/error';
+
 
 // Vendors
 @import 'vendors/fontawesome-free-5.11.2/css/all.min.css';

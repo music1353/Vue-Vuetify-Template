@@ -11,7 +11,11 @@
 <script>
 import '@/assets/scss/app.scss'
 
+import Snackbar from '@/components/_partial/Snackbar'
+
 export default {
-  
+  components: {
+    Snackbar
+  }
 }
 </script>
