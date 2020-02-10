@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Login from '../views/Login.vue'
-import Home from '../views/Home.vue'
+import Login from '../pages/Login.vue'
+import Home from '../pages/Home.vue'
 
 import ErrorPage403 from '@/components/Error/ErrorPage403.vue'
 import ErrorPage404 from '@/components/Error/ErrorPage404.vue'
@@ -16,7 +16,7 @@ const routes = [
     component: Login
   },
   {
-    path: '/',
+    path: '/home',
     name: 'home',
     component: Home
   },

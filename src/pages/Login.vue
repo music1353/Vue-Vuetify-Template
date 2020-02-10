@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import {apiLogin} from '@/apis/base.js'
+// import {apiLogin} from '@/apis/auth.js'
 
 export default {
   components: {},
@@ -58,7 +58,7 @@ export default {
         return
       }
 
-      apiLogin({
+      this.$api.auth.login({
         account: this.loginForm.account,
         password: this.loginForm.password
       }).then((response) => {
@@ -78,6 +78,8 @@ export default {
           'account': '',
           'password': ''
         }
+
+        this.$router.push('/home');
       });
     }
   }
