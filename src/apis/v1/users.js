@@ -8,5 +8,3 @@ const users = {
 }
 
 export default users;
-
-// export const apiv1UsersDetail = () => req('get', '/v1/users/detail')

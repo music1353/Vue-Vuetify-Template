@@ -16,6 +16,3 @@ const auth = {
 }
 
 export default auth;
-
-// export const apiSignUp = params => req('post', '/signup', params)
-// export const apiLogin = params => req('post', '/login', params)

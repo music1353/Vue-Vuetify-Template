@@ -32,8 +32,6 @@
 </template>
 
 <script>
-// import {apiLogin} from '@/apis/auth.js'
-
 export default {
   components: {},
   data() {

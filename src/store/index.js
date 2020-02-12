@@ -13,10 +13,10 @@ export default new Vuex.Store({
     snackbar
   },
   plugins: [createPersistedState({
-    storage: window.sessionStorage,
+    storage: window.localStorage,
       reducer(val) {
           return {
-          // 只储存state中的assessmentData
+          // 只儲存特定module
           auth: val.auth
         }
      }
