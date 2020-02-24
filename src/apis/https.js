@@ -17,7 +17,7 @@ const errorHandle = (status, msg) => {
     // 401: 未登入或認證過期
     // 清除本地token和清空vuex中token
     case 401:
-      if (router.currentRoute == 'Login') {
+      if (router.currentRoute.name == 'Login') {
         // 不用tip, 會由Login去導向首頁
       } else {
         // 清除token
