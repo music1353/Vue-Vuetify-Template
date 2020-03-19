@@ -1,8 +1,9 @@
-const snackbar = {
+export default {
   namespaced: true,
   state: {
-    msg: '',
     visible: false,
+    msg: '',
+    // attribute
     showClose: true,
     timeout: 6000,
     color: 'pink'
@@ -10,35 +11,40 @@ const snackbar = {
   mutations: {
     OPEN_SNACKBAR(state, options) {
       state.visible = true;
-      state.msg = options.msg;
+      
+      Object.keys(options).forEach((k) => {
+        state[k] = options[k];
+      });
     },
     CLOSE_SNACKBAR(state) {
       state.visible = false;
     },
     // set snackbar
-    setShowClose(state, isShow) {
-      state.showClose = isShow;
-    },
-    setTimeout(state, timeout) {
-      state.timeout = timeout;
-    },
-    setColor(state, color) {
-      state.color = color;
+    reset_attribute(state) {
+      state.showClose = true;
+      state.timeout = 6000;
+      state.color = 'pink';
     }
+    // setShowClose(state, isShow) {
+    //   state.showClose = isShow;
+    // },
+    // setTimeout(state, timeout) {
+    //   state.timeout = timeout;
+    // },
+    // setColor(state, color) {
+    //   state.color = color;
+    // }
   },
   actions: {
     openSnackbar(context, options) {
       let timeout = context.state.timeout;
 
-      context.commit('OPEN_SNACKBAR', {
-        msg: options.msg
-      });
+      context.commit('OPEN_SNACKBAR', options);
 
       setTimeout(() => {
-        context.commit('CLOSE_SNACKBAR')
+        context.commit('CLOSE_SNACKBAR');
+        context.commit('reset_attribute');
       }, timeout);
     }
   }
 }
-
-export default snackbar;
