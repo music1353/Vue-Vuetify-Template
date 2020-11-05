@@ -1,16 +1,35 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Clinic from '../pages/Clinic.vue'
+import Login from '../pages/Login.vue'
+import Home from '../pages/Home.vue'
+
+import ErrorPage403 from '@/components/Error/ErrorPage403.vue'
+import ErrorPage404 from '@/components/Error/ErrorPage404.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/clinic',
-    name: 'clinic',
-    component: Clinic
+    path: '/',
+    name: 'Login',
+    component: Login
   },
+  {
+    path: '/home',
+    name: 'home',
+    component: Home
+  },
+  {
+    name: '403',
+    path: '/error/403',
+    component: ErrorPage403
+  },
+  {
+    name: '404',
+    path: '*',
+    component: ErrorPage404
+  }
 ]
 
 const router = new VueRouter({

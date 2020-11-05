@@ -1,9 +1,0 @@
-// Author: Mu Yang <http://muyang.pro>
-
-@each $direction in top, bottom, left, right {
-  .#{$direction}-0 { #{$direction}: 0; }
-}
-
-.input-box-shadow {
-  box-shadow: $input-box-shadow !important;
-}

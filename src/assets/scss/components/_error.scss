@@ -1,0 +1,47 @@
+// error page
+.error-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .error-main {
+    text-align: center;
+    margin: 0 auto;
+
+    .error-img {
+      width: 150px;
+      border-radius: 25px;
+    }
+
+    .error-code {
+      font-size: 30px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .back-original-page {
+      margin-top: 20px;
+      transition: all .3s ease;
+
+      &:hover {
+        color: $primary-text-color;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .error-footer {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    color: #909399;
+    font-weight: bold;
+    transition: all .3s ease;
+
+    &:hover {
+      color: $primary-text-color;
+    }
+  }
+}

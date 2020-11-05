@@ -1,28 +1,21 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-// import vuetify from './plugins/vuetify'
+import vuetify from './plugins/vuetify'
 import store from './store'
 import api from './apis'
 
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-
-// Install BootstrapVue
-Vue.use(BootstrapVue)
-// Optionally install the BootstrapVue icon components plugin
-Vue.use(IconsPlugin)
-
-// import 'vuetify/dist/vuetify.min.css'
+import 'vuetify/dist/vuetify.min.css'
 
 Vue.config.productionTip = false
 
-// Vue.prototype.$api = api; // 將api掛載到vue的原型上
+Vue.prototype.$api = api; // 將api掛載到vue的原型上
 
-// Vue.use(vuetify);
+Vue.use(vuetify);
 
 new Vue({
   router,
-  // vuetify,
+  vuetify,
   store,
   render: h => h(App)
 }).$mount('#app')
