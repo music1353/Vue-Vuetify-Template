@@ -1,0 +1,26 @@
+// Author: Mu Yang <http://muyang.pro>
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity .25s;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+.page-enter-to,
+.page-leave {
+  opacity: 1;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}

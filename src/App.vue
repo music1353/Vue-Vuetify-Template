@@ -1,21 +1,16 @@
 <template>
   <div id="app">
-  <v-app>
     <router-view/>
-
-    <Snackbar style="height:0"></Snackbar>
-  </v-app>
   </div>
 </template>
 
 <script>
-import '@/assets/scss/app.scss'
-
-import Snackbar from '@/components/_partial/Snackbar'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+import '@/assets/scss/main.scss'
 
 export default {
   components: {
-    Snackbar
   }
 }
 </script>

@@ -1,0 +1,135 @@
+// Author: Mu Yang <http://muyang.pro>
+
+// Root
+html {
+  font-size: $root-size;
+}
+
+// Header
+h1, h2, h3, h4, h5, h6 {
+  &.special {
+    color: $headings-color-2;
+  }
+}
+
+// Badge
+.badge.special {
+  box-shadow: $badge-box-shadow;
+  line-height: $badge-line-height;
+  vertical-align: middle;
+  border: $btn-border-width solid transparent;
+
+  &.badge-sm {
+    font-size: $btn-font-size-sm;
+    padding: $btn-padding-y-sm $btn-padding-x-sm;
+  }
+
+  &.badge-md {
+    font-size: $btn-font-size;
+    padding: $btn-padding-y $btn-padding-x;
+  }
+
+  &.badge-lg {
+    font-size: $btn-font-size-lg;
+    padding: $btn-padding-y-lg $btn-padding-x-lg;
+  }
+}
+
+// Button
+.btn.special {
+  &:not(.disabled) {
+    box-shadow: $btn-box-shadow;
+  }
+}
+
+.btn-special {
+  border-radius: $rounded-pill !important; // rounded-pill
+
+  &:not(.disabled) {
+    box-shadow: $btn-box-shadow;
+  }
+
+  &.active {
+    @extend .btn-accent.active;
+  }
+
+  &:not(.active):not(.disabled) {
+    @extend .btn-outline-secondary;
+  }
+
+  &.disabled {
+    @extend .btn-secondary.disabled;
+  }
+}
+
+.btn-group[aria-invalid] {
+  .btn-special {
+    @extend .border;
+    @extend .border-danger;
+  }
+}
+
+.btn.disabled {
+  cursor: not-allowed;
+}
+
+.btn-group-wrapper {
+  $spacer-2: map-get($spacers, 2);
+
+  &.btn-group-wrapper-sm {
+
+    $-label-top: $input-padding-y;
+    $-label-border: $input-border-width;
+    $-label-height: $input-font-size * $input-line-height;
+    $-btn-top: $btn-padding-y-sm;
+    $-btn-border: $btn-border-width;
+    $-btn-height: $btn-font-size-sm * $btn-line-height-sm;
+
+    $-top: $-label-top - $-btn-top;
+    $-border: $-label-border - $-btn-border;
+    $-height: $-label-height - $-btn-height;
+
+    padding-top: add($-top + $-height/2, $-border);
+  }
+
+  > .btn-group-special,
+  > .btn-group-toggle {
+    margin-bottom: -$spacer-2;
+    display: block;
+
+    .btn,
+    .badge {
+      margin-bottom: $spacer-2;
+      margin-right: $spacer-2;
+    }
+  }
+}
+
+// Calendar
+.b-calendar .b-calendar-grid-body .col[data-date] {
+  cursor: unset;
+
+  &[aria-disabled] {
+    cursor: not-allowed;
+  }
+
+  .btn.disabled {
+    @extend .text-muted;
+  }
+}
+
+// Card
+.card {
+  box-shadow: $card-box-shadow;
+}
+
+// Navbar
+.navbar {
+  box-shadow: $navbar-box-shadow;
+
+  .nav-icon {
+    width: $nav-icon-width;
+    height: $nav-icon-height;
+    text-align: center;
+  }
+}
